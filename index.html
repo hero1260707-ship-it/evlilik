@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Bu sihirli satır, .tsx kodunu tarayıcının anlayacağı dile çevirir -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <style>
       body {
         font-family: 'Lato', sans-serif;
@@ -33,6 +37,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- Script türünü "text/babel" olarak değiştirdik, böylece çevirici bu kodu işler -->
+    <script type="text/babel" data-presets="react,typescript" src="/index.tsx"></script>
   </body>
 </html>
